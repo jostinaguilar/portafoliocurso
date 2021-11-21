@@ -1,6 +1,7 @@
-let unit = document.querySelector(".container__units");
+let unit = document.querySelector(".units");
 
 unit.addEventListener("click", (e) => {
+  console.log(e.target);
   if ((e.target && e.target.id == "unitOne") || e.target.id == 1) {
     icon(1);
     watchClass("one");
@@ -23,5 +24,5 @@ function icon(id) {
 
 function watchClass(id) {
   let season = document.getElementById(id);
-  season.classList.toggle("activo-class");
+  season.classList.toggle("active");
 }
